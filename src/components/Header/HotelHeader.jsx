@@ -17,11 +17,11 @@ const HotelHeader = () => {
         
         <div>
           <label htmlFor="city"> Location :</label>
-          <input type="text" id="city" placeholder="Goa" onChange={(e) => setFromValue(e.target.value)}/>
+          <input type="text" id="city" placeholder="Goa" />
         </div>
         <div >
           <label htmlFor="in">Check In :</label>
-          <input type="date" id="in"  onChange={(e) => setToValue(e.target.value)}></input>
+          <input type="date" id="in"  ></input>
         </div >
         <div>
           <label htmlFor="out">Check Out :</label>

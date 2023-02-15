@@ -23,11 +23,11 @@ const Header = (props) => {
         
         <div>
           <label htmlFor="from">From :</label>
-          <input type="text" id="from" placeholder="Delhi" onChange={(e) => setFromValue(e.target.value)}/>
+          <input type="text" id="from" placeholder="Delhi" />
         </div>
         <div >
           <label htmlFor="to">TO :</label>
-          <input type="text" id="to" placeholder="Mumbai" onChange={(e) => setToValue(e.target.value)}></input>
+          <input type="text" id="to" placeholder="Mumbai" ></input>
         </div >
         <div>
           <label htmlFor="date">DEPARTURE</label>
