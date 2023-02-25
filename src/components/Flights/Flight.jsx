@@ -5,9 +5,7 @@ import Checkout from "../CheckOut/Checkout";
 import { Link } from "react-router-dom";
 import Header from "../Header/Header";
 
-
 const Flight = () => {
- 
   const [flightData, setFlightData] = useState([]);
   useEffect(() => {
     fetchData();
@@ -16,7 +14,6 @@ const Flight = () => {
     try {
       let response = await axios.get(
         `https://content.newtonschool.co/v1/pr/63b85b1209f0a79e89e17e3a/flights`
-        
       );
       // console.log("response:", response.data);
       setFlightData(response.data);
@@ -36,11 +33,11 @@ const Flight = () => {
       window.location.reload();
     }
   };
- 
+
   return (
     <div>
-      <Header/>
-      <h1>Availabel Tickets</h1>
+      <Header />
+      <h1>Availabel Flights</h1>
       <div>
         <div>
           {flightData.map((post, index) => {
@@ -48,7 +45,7 @@ const Flight = () => {
               from,
               to,
               departure,
-              return:arivalTime,
+              return: arivalTime,
               airlineName,
               via,
               price,
@@ -57,9 +54,7 @@ const Flight = () => {
             // console.log(post);
             return (
               <>
-                
-                <div key={index}  className="main-div">
-                
+                <div key={index} className="main-div">
                   <div className="style">
                     <span>
                       <p>FROM : </p>
@@ -71,22 +66,22 @@ const Flight = () => {
                       <h3>
                         {departure?.departureTime} | {departure?.departureDate}
                       </h3>
-                            </span>
-                            <span>
+                    </span>
+                    <span>
                       <p>PRICE</p>
                       <h3>{price}</h3>
-                            </span>
-                            <span>
+                    </span>
+                    <span>
                       <p>TO :</p>
                       <h3>{to}</h3>
-                            </span>
-                            <span>
+                    </span>
+                    <span>
                       <p>RETURN</p>
-                      <h3>{arivalTime?.returnDate} | {arivalTime?.returnTime}</h3>
-                      
-                              
-                            </span>
-                            <span>
+                      <h3>
+                        {arivalTime?.returnDate} | {arivalTime?.returnTime}
+                      </h3>
+                    </span>
+                    <span>
                       <p>VIA</p>
                       <h3>{via} --</h3>
                     </span>
@@ -98,16 +93,13 @@ const Flight = () => {
                       <p>DURATION</p>
                       <h3>{duration}</h3>
                     </span>
-                  
-                   
+
                     <div className="btns">
                       <button id="book" type="submit" onClick={handelBook}>
                         Book
                       </button>
                     </div>
-                    
-                        </div>
-                       
+                  </div>
                 </div>
               </>
             );

@@ -36,7 +36,7 @@ const Train = () => {
   return (
     <div>
       <Header/>
-      <h1>Availabel Tickets</h1>
+      <h1>Availabel Trains</h1>
       <div>
         <div>
           {trainData.map((post, index) => {

@@ -15,11 +15,8 @@ const Login = () => {
   const handleSignIn = () => {
     if (useremail == localEmail && userpassword == localPassword) {
       localStorage.setItem("signUp", useremail);
-
-      setError(false);
-
       window.history.pushState({}, "", "/");
-      window.location.reload();
+      // window.location.reload();
     } else {
       setError(true);
     }
